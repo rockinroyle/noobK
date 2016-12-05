@@ -489,13 +489,13 @@ static int mako_hotplug_probe(struct platform_device *pdev)
 		goto err;
 	}
 
-	t->enabled = DEFAULT_HOTPLUG_ENABLED;
 	t->load_threshold = DEFAULT_LOAD_THRESHOLD;
 	t->high_load_counter = DEFAULT_HIGH_LOAD_COUNTER;
 	t->max_load_counter = DEFAULT_MAX_LOAD_COUNTER;
 	t->cpufreq_unplug_limit = DEFAULT_CPUFREQ_UNPLUG_LIMIT;
 	t->min_time_cpu_online = DEFAULT_MIN_TIME_CPU_ONLINE;
 	t->timer = DEFAULT_TIMER;
+	t->enabled = DRIVER_ENABLED;
 
 	ret = misc_register(&mako_hotplug_control_device);
 	if (ret) {
