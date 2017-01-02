@@ -13,6 +13,10 @@ obj-$(CONFIG_CPU_FREQ_GOV_INTERACTIVE)	+= cpufreq_interactive.o
 obj-$(CONFIG_CPU_FREQ_GOV_COMMON)		+= cpufreq_governor.o
 obj-$(CONFIG_CPU_BOOST)			+= cpu-boost.o
 
+# Custom CPUfreq Govenors
+obj-$(CONFIG_CPU_FREQ_GOV_BIOSHOCK)	   += cpufreq_bioshock.o
+# Custom CPUfreq Govenors -End
+
 obj-$(CONFIG_GENERIC_CPUFREQ_CPU0)	+= cpufreq-cpu0.o
 
 ##################################################################################
