@@ -89,15 +89,10 @@ generic_acl_set(struct dentry *dentry, const char *name, const void *value,
 			goto failed;
 		switch (type) {
 		case ACL_TYPE_ACCESS:
-<<<<<<< HEAD
-			error = posix_acl_update_mode(inode, &inode->i_mode, &acl);
-			if (error)
-=======
 			old_acl = acl;
 			error = posix_acl_update_mode(inode, &inode->i_mode,
 						      &acl);
 			if (error < 0)
->>>>>>> 1026a8c... tmpfs: clear S_ISGID when setting posix ACLs
 				goto failed;
 			if (!acl)
 				posix_acl_release(old_acl);
